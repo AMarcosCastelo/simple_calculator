@@ -11,19 +11,27 @@ body {
     margin: auto;
     width: 350px;
     height: 500px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 2fr;
     grid-template-rows: 1fr 2fr;
+    background: -webkit-linear-gradient(60deg,#4189a1,#363b63);
+    background: -o-linear-gradient(60deg,#4189a1,#363b63);
     background: linear-gradient(30deg,#4189a1,#363b63);
 }
 
  #calc-display {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 2fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
     color: white;
     padding-bottom: 2px;
 }
 
 #display-header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 10px 10px;
     font-size: 1.35em;
@@ -31,7 +39,9 @@ body {
 
 
 #display-body {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 4fr 1fr;
     grid-template-columns: 4fr 1fr;
     height: 120px;
     text-align: right;
@@ -62,17 +72,103 @@ body {
 
 .btn-backspace:hover {
     cursor: pointer;
-    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
 #keyboard {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 2;
     grid-row: 2;
+    -ms-grid-columns: auto 2px auto 2px auto 2px auto;
     grid-template-columns: auto auto auto auto;
+    -ms-grid-rows: auto 2px auto 2px auto 2px auto;
     grid-template-rows: auto auto auto auto;
     grid-gap: 2px;
     margin: 4px;
+}
+
+#keyboard > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+#keyboard > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+#keyboard > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+
+#keyboard > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+}
+
+#keyboard > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+
+#keyboard > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+
+#keyboard > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+}
+
+#keyboard > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 7;
+}
+
+#keyboard > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+}
+
+#keyboard > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+}
+
+#keyboard > *:nth-child(11) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+}
+
+#keyboard > *:nth-child(12) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
+}
+
+#keyboard > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+}
+
+#keyboard > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+}
+
+#keyboard > *:nth-child(15) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 5;
+}
+
+#keyboard > *:nth-child(16) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 7;
 }
 
 #date {
@@ -85,9 +181,15 @@ body {
     width: 50%; 
 }
 .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 2em;
     border-radius: 10px;
 }
@@ -98,7 +200,8 @@ body {
 
 .btn-number:hover {
     cursor: pointer;
-    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
 .btn-simbols {
@@ -108,11 +211,11 @@ body {
 
 .btn-simbols:hover {
     cursor: pointer;
-    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
 .m-0 {
     margin: 0;
 }
-
 
